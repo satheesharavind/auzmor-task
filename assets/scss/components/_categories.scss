@@ -1,0 +1,124 @@
+/* Categories of items style */
+
+.temperature, .burned, .steps, .heart {
+	padding: 23px 50px 0 35px;
+	@media #{$mobile-small} {
+		padding: 23px 30px 0 10%;
+	}
+	border: 1px solid $Grey-05;
+	&-value {
+		p {
+			@extend .app-black-value;
+		}
+	}
+	&-label {
+		.field-label {
+			@extend .app-grey-name;
+		}
+	}
+	&-chart {
+		svg {
+			height: 40px;
+			max-width: 100%;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.temperature {
+	border-left: 0px;
+	&-o {
+		font-size: 22px;
+		line-height: 12px;
+		vertical-align: top;
+		color: $Grey;
+	}
+}
+
+.steps {
+	border-left: 0px;
+	&-chart {
+		height: 53px;
+		padding-top:25px;
+		&-bg {
+			background: $Grey-05;
+			float: left;
+			width: 100%;
+		}
+		&-per {
+			height: 3px;
+			width: 35%;
+			float: left;
+			background: $Turquoise;
+		}
+	}
+}
+
+.temperature, .burned {
+	border-bottom: 0px;
+}
+
+.burned, .heart {
+	border-right: 0px;
+	border-left: 0px;
+	&-cal, &-bpm {
+		color: $Grey;
+		font-size: 24px;
+		line-height: 24px;
+		vertical-align: bottom;
+	}
+}
+
+.activity {
+	&-top {
+		padding: 30px 25px 0 32px;
+		float: left;
+		width: 100%;
+		@media #{$mobile-small} {
+			padding: 30px 20px 0 5%;
+		}
+		.title {
+			font-size: 22px;
+			width: calc(100% - 125px);
+			float: left;
+		}
+		.mentbar {
+			float: left;
+			padding-top: 8px;
+			> div {
+				&[class*="mentbar-"] {
+					display: inline-block;
+					color: $Grey;
+					font-weight: 300;
+					&:before{
+						content: "";
+						width: 8px;
+						height: 8px;
+						border-radius: 10px;
+						background: $Grey;
+						display: inline-block;
+						margin-right: 10px;
+					}
+				}
+				&[class*='today']{
+					&:before {
+						background: $Turquoise;
+					}
+				}
+				&[class*='avg'] {
+					margin-left: 15px;
+					&:before {
+						background: $Grey;
+					}
+				}
+
+			}
+		}
+	}
+	&-chart {
+		svg {
+			width: 100%;
+			height: 155px;
+		}
+	}
+}

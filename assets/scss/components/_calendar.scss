@@ -1,0 +1,68 @@
+/* Calender Page Style */
+
+.calendar {
+	&-months {
+		margin-top: 100px;
+		@media #{$mobile-small} {
+			margin-top: 85px;
+		}
+		ul {
+			list-style: none;
+			padding: 0px;
+			li {
+				float: left;
+			}
+		}
+	}
+	&-month {
+		text-align: center;
+		color: $Grey;
+		label {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+	&-canvas {
+		margin-top: 35px;
+	}
+}
+
+.your-goal {
+	margin-top: 15px;
+	&-target {
+		&:before {
+			content: "";
+			height: 2px;
+			width: 50px;
+			display: inline-block;
+			background: $Grey;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		span {
+			font-size: 16px;
+			color: $Grey;
+		}
+	}
+	.max-weight, .min-weight {
+		float: left;
+		margin-top: 50px;
+		padding-left: 60px;
+		&-date {
+			color: $Grey;
+			font-size: 14px;
+		}
+		&-weight {
+			font-size: 32px;
+			span {
+				font-size: 26px;
+				color: $Grey;
+				margin-left: 10px;
+			}
+		}
+		&-label {
+			font-size: 14px;
+			color: $Grey;
+		}
+	}
+}

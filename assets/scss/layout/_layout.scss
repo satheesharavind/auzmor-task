@@ -1,0 +1,203 @@
+/* Basic Layout for all pages */
+.header {
+	height: 205px;
+	position: relative;
+	@media #{$mobile-small} {
+		height: 200px;
+	}
+	&.cover {
+		background: url('../images/profile-pic.jpg') no-repeat center;
+		background-size: cover;
+		height: 208px;
+		@media #{$mobile-small} {
+			height: 195px;
+		}
+		.container {
+			background: $SteelBlue-08;
+		}
+		div[class*='cutoff'] {
+			/* border-bottom: 5px solid $Turquoise-2; */
+			width: 62%;
+			background: -webkit-linear-gradient(left, $White-00 80%, $White-02);
+			/* background: $White-05; */
+			display: inline-block;
+			height: 208px;
+			position: relative;
+			@media #{$mobile-small} {
+				height: 195px;
+			}
+			&:after {
+				content: "";
+				height: 4px;
+				width: 100%;
+				display: inline-block;
+				position: absolute;
+				background: -webkit-linear-gradient(left, $Turquoise, $Turquoise-2);
+				bottom: 0px;
+				right: 0px;
+			}
+		}
+		.welcome {
+			&-text {
+				p {
+					color: $White;
+					font-size: 28px;
+					line-height: 28px;
+					font-weight: 300;
+					letter-spacing: 2px;
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+	.menu-toggle {
+		width: 30px;
+		height: 30px;
+		margin: 23px 0 0 35px;
+		@media #{$mobile-small} {
+			margin: 23px 0 0 10%;
+		}
+		padding-bottom: 5px;
+		float: left;
+		span {
+			height: 2px;
+			background: $Grey-dr;
+			width: 100%;
+			margin-bottom: 7px;
+			display: table;
+			&[class*="right"] {
+				vertical-align: middle;
+			}
+			&[class*="right"], &[class*="left"] {
+				width: 60%;
+			}
+			&[class*="right"] {
+				margin-top: 5px;
+				margin-right: 10%;
+				float: right;
+			}
+			&[class*="left"] {
+				float: left;
+				margin-left: 10%;
+			}
+		}
+	}
+	.container {
+		height: 208px;
+		@media #{$mobile-small} {
+			height: 200px;
+		}
+		.welcome {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			&-text {
+				
+			}
+		}
+	}
+}
+.page {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	overflow: auto;
+	&-profile {
+		background: $SteelBlue;
+	}
+	&-calendar {
+		.header {
+			height: 230px;
+			@media #{$mobile-small} {
+				height: 225px;
+			}
+			.container {
+				height: 230px;
+			}
+		}
+		.menu-toggle {
+			&:not(.animated) {
+				width: 24px;
+				margin: 43px 0 0 35px;
+				@media #{$mobile-small} {
+					margin: 35px 0 0 25px;
+				}
+			}
+			span {
+				background: $Grey;
+				height: 2px;
+				&[class*="right"], &[class*="left"] {
+					&:not(.animated) {
+						margin: 0;
+					}
+				}
+				&[class*="right"] {
+					transform: rotate(140deg);
+					float: left;
+					&:not(.animated) {
+						margin-top: -10px;
+					}
+				}
+				&[class*="left"] {
+					transform: rotate(220deg);
+					&:not(.animated) {
+						margin-bottom: -5px;
+					}
+				}
+				&[class*="middle"] {
+					&:not(.animated) {
+						margin: 0;
+						margin-top: -5px;
+					}
+				}
+			}
+		}
+		.weight {
+			position: absolute;
+			bottom: 0px;
+			padding: 0 60px;
+			@media #{$mobile-small} {
+				padding: 0 50px;
+			}
+			p {
+				margin-bottom: 0px;
+			}
+			&-date {
+				color: $Grey;
+				padding: 0 0 5px 5px;
+			}
+			&-value {
+				font-size: 70px;
+				line-height: 70px;
+				font-weight: 400;
+				@media #{$mobile-small} {
+
+				}
+				#target {
+					font-weight: 200;
+					font-size: 80px;
+				}
+			}
+			&-type {
+				font-size: 40px;
+				vertical-align: bottom;
+				margin-left: 25px;
+				font-weight: 300;
+				color: $Grey-dr;
+			}
+			&-label {
+				p {
+					color: $Grey-dr;
+					font-size: 20px;
+					font-weight: 300;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+.footer {
+	/* position: fixed; */
+	/* bottom: 0px; */
+	width: 100%;
+}

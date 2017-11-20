@@ -1,0 +1,25 @@
+/* SASS */
+
+@import 'variable/colors.scss';
+@import 'variable/variables.scss';
+@import 'variable/mixins.scss';
+@import 'variable/inheritance.scss';
+
+// base
+@import 'base/responsive.scss';
+@import 'base/base.scss';
+@import 'base/grid.scss';
+
+
+//layout
+@import 'layout/layout.scss';
+//@import 'layout/header.scss';
+//@import 'layout/footer.scss';
+//@import 'layout/blocks.scss';
+
+
+//components
+@import 'components/categories.scss';
+@import 'components/result.scss';
+@import 'components/goals.scss';
+@import 'components/calendar.scss';

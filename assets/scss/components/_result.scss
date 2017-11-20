@@ -1,0 +1,45 @@
+/* Results page style */
+
+.field {
+	&-result {
+		/* border: 1px solid $Grey; */
+		padding: 35px 37px 32px 37px;
+		@media #{$mobile-small} {
+			padding: 30px 15px 32px 30px;
+		}
+		&.animated {
+			border: 1px solid $Profile-border;
+		}
+		&:not(.animated) {
+			border-bottom: 1px solid $Profile-border;
+			border-right: 1px solid $Profile-border;
+			&.last {
+				border-right: 0px;
+			}
+		}
+	}
+	&-value {
+		p {
+			color: $White;
+			font-weight: 400;
+			font-size: 26px;
+			line-height: 26px;
+			margin-bottom: 0px;
+		}
+		&-type {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 18px;
+			vertical-align: bottom;
+			margin-left: 5px;
+		}
+	}
+	&-label {
+		font-size: 14px;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: 14px;
+		letter-spacing: 1px;
+		color: $Grey-05;
+		margin-top: 5px;
+	}
+}

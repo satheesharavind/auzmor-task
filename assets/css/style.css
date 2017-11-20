@@ -1,0 +1,567 @@
+/* SASS */
+/* Color Code Variables */
+/* Basic Colors */
+/* Varient Colors */
+/* Basiv Color Transparent */
+/* App Colors */
+/* All Page Colors */
+/* Home Page */
+/* Basic Font Style Variables */
+/* ======
+** Mixins
+** ======
+** Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist.
+** A mixin lets you make groups of CSS declarations that you want to reuse throughout your site.
+** You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes.
+*/
+/* Example:
+** SCSS
+	@mixin border-radius($radius) {
+	  -webkit-border-radius: $radius;
+	     -moz-border-radius: $radius;
+	      -ms-border-radius: $radius;
+	          border-radius: $radius;
+	}
+
+** CSS
+	.box { @include border-radius(10px); }
+*/
+/* ==================
+** Extend/Inheritance
+** ==================
+** This is one of the most useful features of Sass.
+** Using @extend lets you share a set of CSS properties from one selector to another.
+** It helps keep your Sass very DRY.
+** In our example we're going to create a simple series of messaging for errors, warnings and successes.
+*/
+/* Example:
+** SCSS
+	.message {
+	  border: 1px solid #ccc;
+	  padding: 10px;
+	  color: #333;
+	}
+
+	.success {
+	  @extend .message;
+	  border-color: green;
+	}
+** CSS
+	.message, .success {
+	  border: 1px solid #cccccc;
+	  padding: 10px;
+	  color: #333;
+	}
+*/
+/* Basic Font Styles */
+.app-black-value, .temperature-value p, .burned-value p, .steps-value p, .heart-value p {
+  font-size: 33px;
+  line-height: 33px;
+  margin: 0; }
+
+.app-grey-name, .temperature-label .field-label, .burned-label .field-label, .steps-label .field-label, .heart-label .field-label {
+  margin-top: 5px;
+  font-size: 14px;
+  /* font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
+  font-family: Lato;
+  font-weight: 100;
+  line-height: 14px;
+  color: #cccccc;
+  letter-spacing: 1px; }
+
+* {
+  font-family: Lato; }
+
+img {
+  max-width: 100%; }
+
+button:hover, button:focus, button:active, button.active, input:hover, input:focus, input:active, input.active, select:hover, select:focus, select:active, select.active, textarea:hover, textarea:focus, textarea:active, textarea.active, .form-control:hover, .form-control:focus, .form-control:active, .form-control.active, a:hover, a:focus, a:active, a.active {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit; }
+
+.container {
+  /* width: 414px; */ }
+
+.btn:hover, .btn:focus {
+  outline: none; }
+.btn:active, .btn.active {
+  outline: none; }
+  .btn:active:hover, .btn:active:focus, .btn.active:hover, .btn.active:focus {
+    outline: none; }
+
+.header .menu-toggle {
+  width: 30px;
+  height: 30px;
+  margin: 15px 0 0 15px;
+  padding-bottom: 5px;
+  float: left; }
+  .header .menu-toggle span {
+    height: 1px;
+    background: #000000;
+    width: 100%;
+    margin-bottom: 7px;
+    display: table; }
+    .header .menu-toggle span[class*="right"] {
+      vertical-align: middle; }
+    .header .menu-toggle span[class*="right"], .header .menu-toggle span[class*="left"] {
+      width: 60%; }
+    .header .menu-toggle span[class*="right"] {
+      margin-top: 5px;
+      margin-right: 10%;
+      float: right; }
+    .header .menu-toggle span[class*="left"] {
+      float: left;
+      margin-left: 10%; }
+.header .profile-pic {
+  position: relative;
+  right: 0;
+  margin: 30px 35px 0 0;
+  float: right;
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  text-align: center;
+  background: #cccccc; }
+  .header .profile-pic .pic {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 50%;
+    background: url("../images/profile-pic.jpg") no-repeat center;
+    background-size: cover; }
+.header .welcome-text {
+  padding: 25px 35px 30px 35px; }
+  @media (max-width: 400px) {
+    .header .welcome-text {
+      padding: 25px 35px 30px 5%; } }
+  .header .welcome-text p {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: #8c95a3; }
+    @media (max-width: 400px) {
+      .header .welcome-text p {
+        font-size: 22px; } }
+  .header .welcome-text a {
+    text-decoration: none;
+    color: #5dd7fc; }
+.header.cover .menu-toggle span {
+  background: #ffffff;
+  height: 2px; }
+.header.cover .welcome-text {
+  padding-bottom: 35px; }
+  @media (max-width: 400px) {
+    .header.cover .welcome-text {
+      padding: 25px 35px 30px 12%; } }
+
+/* Grid System Style */
+.grid-1 {
+  width: 8.3333333333%; }
+
+.grid-2 {
+  width: 16.6666666667%; }
+
+.grid-3 {
+  width: 25%; }
+
+.grid-4 {
+  width: 33.3333333333%; }
+
+.grid-5 {
+  width: 41.6666666667%; }
+
+.grid-6 {
+  width: 50%; }
+
+.grid-7 {
+  width: 58.3333333333%; }
+
+.grid-8 {
+  width: 66.6666666667%; }
+
+.grid-9 {
+  width: 75%; }
+
+.grid-10 {
+  width: 83.3333333333%; }
+
+.grid-11 {
+  width: 91.6666666667%; }
+
+.grid-12 {
+  width: 100%; }
+
+[class^='grid-'] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  /* padding-right: 15px; */
+  /* padding-left: 15px; */ }
+
+/* Basic Layout for all pages */
+.header {
+  height: 205px;
+  position: relative; }
+  @media (max-width: 400px) {
+    .header {
+      height: 200px; } }
+  .header.cover {
+    background: url("../images/profile-pic.jpg") no-repeat center;
+    background-size: cover;
+    height: 208px; }
+    @media (max-width: 400px) {
+      .header.cover {
+        height: 195px; } }
+    .header.cover .container {
+      background: rgba(60, 86, 127, 0.8); }
+    .header.cover div[class*='cutoff'] {
+      /* border-bottom: 5px solid $Turquoise-2; */
+      width: 62%;
+      background: -webkit-linear-gradient(left, rgba(250, 250, 250, 0) 80%, rgba(250, 250, 250, 0.2));
+      /* background: $White-05; */
+      display: inline-block;
+      height: 208px;
+      position: relative; }
+      @media (max-width: 400px) {
+        .header.cover div[class*='cutoff'] {
+          height: 195px; } }
+      .header.cover div[class*='cutoff']:after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        background: -webkit-linear-gradient(left, #5dd7fc, #1df9dd);
+        bottom: 0px;
+        right: 0px; }
+    .header.cover .welcome-text p {
+      color: #ffffff;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-bottom: 4px; }
+  .header .menu-toggle {
+    width: 30px;
+    height: 30px;
+    margin: 23px 0 0 35px;
+    padding-bottom: 5px;
+    float: left; }
+    @media (max-width: 400px) {
+      .header .menu-toggle {
+        margin: 23px 0 0 10%; } }
+    .header .menu-toggle span {
+      height: 2px;
+      background: #8c95a3;
+      width: 100%;
+      margin-bottom: 7px;
+      display: table; }
+      .header .menu-toggle span[class*="right"] {
+        vertical-align: middle; }
+      .header .menu-toggle span[class*="right"], .header .menu-toggle span[class*="left"] {
+        width: 60%; }
+      .header .menu-toggle span[class*="right"] {
+        margin-top: 5px;
+        margin-right: 10%;
+        float: right; }
+      .header .menu-toggle span[class*="left"] {
+        float: left;
+        margin-left: 10%; }
+  .header .container {
+    height: 208px; }
+    @media (max-width: 400px) {
+      .header .container {
+        height: 200px; } }
+    .header .container .welcome {
+      position: absolute;
+      bottom: 0px;
+      width: 100%; }
+
+.page {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto; }
+  .page-profile {
+    background: #3c567f; }
+  .page-calendar .header {
+    height: 230px; }
+    @media (max-width: 400px) {
+      .page-calendar .header {
+        height: 225px; } }
+    .page-calendar .header .container {
+      height: 230px; }
+  .page-calendar .menu-toggle:not(.animated) {
+    width: 24px;
+    margin: 43px 0 0 35px; }
+    @media (max-width: 400px) {
+      .page-calendar .menu-toggle:not(.animated) {
+        margin: 35px 0 0 25px; } }
+  .page-calendar .menu-toggle span {
+    background: #cccccc;
+    height: 2px; }
+    .page-calendar .menu-toggle span[class*="right"]:not(.animated), .page-calendar .menu-toggle span[class*="left"]:not(.animated) {
+      margin: 0; }
+    .page-calendar .menu-toggle span[class*="right"] {
+      transform: rotate(140deg);
+      float: left; }
+      .page-calendar .menu-toggle span[class*="right"]:not(.animated) {
+        margin-top: -10px; }
+    .page-calendar .menu-toggle span[class*="left"] {
+      transform: rotate(220deg); }
+      .page-calendar .menu-toggle span[class*="left"]:not(.animated) {
+        margin-bottom: -5px; }
+    .page-calendar .menu-toggle span[class*="middle"]:not(.animated) {
+      margin: 0;
+      margin-top: -5px; }
+  .page-calendar .weight {
+    position: absolute;
+    bottom: 0px;
+    padding: 0 60px; }
+    @media (max-width: 400px) {
+      .page-calendar .weight {
+        padding: 0 50px; } }
+    .page-calendar .weight p {
+      margin-bottom: 0px; }
+    .page-calendar .weight-date {
+      color: #cccccc;
+      padding: 0 0 5px 5px; }
+    .page-calendar .weight-value {
+      font-size: 70px;
+      line-height: 70px;
+      font-weight: 400; }
+      .page-calendar .weight-value #target {
+        font-weight: 200;
+        font-size: 80px; }
+    .page-calendar .weight-type {
+      font-size: 40px;
+      vertical-align: bottom;
+      margin-left: 25px;
+      font-weight: 300;
+      color: #8c95a3; }
+    .page-calendar .weight-label p {
+      color: #8c95a3;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 20px; }
+
+.footer {
+  /* position: fixed; */
+  /* bottom: 0px; */
+  width: 100%; }
+
+/* Categories of items style */
+.temperature, .burned, .steps, .heart {
+  padding: 23px 50px 0 35px;
+  border: 1px solid rgba(204, 204, 204, 0.5); }
+  @media (max-width: 400px) {
+    .temperature, .burned, .steps, .heart {
+      padding: 23px 30px 0 10%; } }
+  .temperature-chart svg, .burned-chart svg, .steps-chart svg, .heart-chart svg {
+    height: 40px;
+    max-width: 100%;
+    margin-bottom: 8px; }
+
+.temperature {
+  border-left: 0px; }
+  .temperature-o {
+    font-size: 22px;
+    line-height: 12px;
+    vertical-align: top;
+    color: #cccccc; }
+
+.steps {
+  border-left: 0px; }
+  .steps-chart {
+    height: 53px;
+    padding-top: 25px; }
+    .steps-chart-bg {
+      background: rgba(204, 204, 204, 0.5);
+      float: left;
+      width: 100%; }
+    .steps-chart-per {
+      height: 3px;
+      width: 35%;
+      float: left;
+      background: #5dd7fc; }
+
+.temperature, .burned {
+  border-bottom: 0px; }
+
+.burned, .heart {
+  border-right: 0px;
+  border-left: 0px; }
+  .burned-cal, .burned-bpm, .heart-cal, .heart-bpm {
+    color: #cccccc;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: bottom; }
+
+.activity-top {
+  padding: 30px 25px 0 32px;
+  float: left;
+  width: 100%; }
+  @media (max-width: 400px) {
+    .activity-top {
+      padding: 30px 20px 0 5%; } }
+  .activity-top .title {
+    font-size: 22px;
+    width: calc(100% - 125px);
+    float: left; }
+  .activity-top .mentbar {
+    float: left;
+    padding-top: 8px; }
+    .activity-top .mentbar > div[class*="mentbar-"] {
+      display: inline-block;
+      color: #cccccc;
+      font-weight: 300; }
+      .activity-top .mentbar > div[class*="mentbar-"]:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 10px;
+        background: #cccccc;
+        display: inline-block;
+        margin-right: 10px; }
+    .activity-top .mentbar > div[class*='today']:before {
+      background: #5dd7fc; }
+    .activity-top .mentbar > div[class*='avg'] {
+      margin-left: 15px; }
+      .activity-top .mentbar > div[class*='avg']:before {
+        background: #cccccc; }
+.activity-chart svg {
+  width: 100%;
+  height: 155px; }
+
+/* Results page style */
+.field-result {
+  /* border: 1px solid $Grey; */
+  padding: 35px 37px 32px 37px; }
+  @media (max-width: 400px) {
+    .field-result {
+      padding: 30px 15px 32px 30px; } }
+  .field-result.animated {
+    border: 1px solid #4c6388; }
+  .field-result:not(.animated) {
+    border-bottom: 1px solid #4c6388;
+    border-right: 1px solid #4c6388; }
+    .field-result:not(.animated).last {
+      border-right: 0px; }
+.field-value p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 0px; }
+.field-value-type {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 18px;
+  vertical-align: bottom;
+  margin-left: 5px; }
+.field-label {
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: rgba(204, 204, 204, 0.5);
+  margin-top: 5px; }
+
+/* Profile Page Goals Style */
+.goals {
+  padding: 32px 35px; }
+  .goals-top .title {
+    color: rgba(204, 204, 204, 0.5);
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .goals-chart {
+    margin-top: 40px;
+    float: left;
+    width: 100%; }
+    .goals-chart:nth-child(2) {
+      margin-top: 25px; }
+  .goals-name, .goals-value {
+    width: 50%;
+    float: left; }
+  .goals-name {
+    color: #ffffff; }
+    .goals-name label {
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 1px; }
+  .goals-value {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: rgba(204, 204, 204, 0.5); }
+  .goals-level {
+    margin-top: 7px;
+    float: left;
+    width: 100%; }
+    .goals-level-bg {
+      background: rgba(204, 204, 204, 0.5);
+      float: left;
+      width: 100%;
+      height: 1px; }
+    .goals-level-per {
+      margin-top: -0.5px;
+      height: 2px;
+      float: left;
+      /* background: $Turquoise; */
+      background: -webkit-linear-gradient(left, rgba(250, 250, 250, 0.5), #ffffff);
+      box-shadow: 0px 0px 10px 1px rgba(250, 250, 250, 0.5);
+      visibility: visible !important; }
+
+/* Calender Page Style */
+.calendar-months {
+  margin-top: 100px; }
+  @media (max-width: 400px) {
+    .calendar-months {
+      margin-top: 85px; } }
+  .calendar-months ul {
+    list-style: none;
+    padding: 0px; }
+    .calendar-months ul li {
+      float: left; }
+.calendar-month {
+  text-align: center;
+  color: #cccccc; }
+  .calendar-month label {
+    font-size: 14px;
+    font-weight: 400; }
+.calendar-canvas {
+  margin-top: 35px; }
+
+.your-goal {
+  margin-top: 15px; }
+  .your-goal-target:before {
+    content: "";
+    height: 2px;
+    width: 50px;
+    display: inline-block;
+    background: #cccccc;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .your-goal-target span {
+    font-size: 16px;
+    color: #cccccc; }
+  .your-goal .max-weight, .your-goal .min-weight {
+    float: left;
+    margin-top: 50px;
+    padding-left: 60px; }
+    .your-goal .max-weight-date, .your-goal .min-weight-date {
+      color: #cccccc;
+      font-size: 14px; }
+    .your-goal .max-weight-weight, .your-goal .min-weight-weight {
+      font-size: 32px; }
+      .your-goal .max-weight-weight span, .your-goal .min-weight-weight span {
+        font-size: 26px;
+        color: #cccccc;
+        margin-left: 10px; }
+    .your-goal .max-weight-label, .your-goal .min-weight-label {
+      font-size: 14px;
+      color: #cccccc; }
+
+/*# sourceMappingURL=style.css.map */

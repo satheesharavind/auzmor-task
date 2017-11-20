@@ -1,0 +1,115 @@
+* {
+	font-family: Lato;
+}
+
+img {
+	max-width: 100%;
+}
+
+button, input, select, textarea, .form-control, a {
+	#{$Hover} {
+		outline: none;
+		box-shadow: none;
+		border-color: inherit;
+	}
+}
+
+.container {
+	/* width: 414px; */
+}
+
+.btn {
+	&:hover, &:focus {
+		outline: none;
+	}
+	&:active, &.active {
+		outline: none;
+		&:hover, &:focus {
+			outline: none;
+		}
+	}
+}
+
+.header {
+	.menu-toggle {
+		width: 30px;
+		height: 30px;
+		margin: 15px 0 0 15px;
+		padding-bottom: 5px;
+		float: left;
+		span {
+			height: 1px;
+			background: $Black;
+			width: 100%;
+			margin-bottom: 7px;
+			display: table;
+			&[class*="right"] {
+				vertical-align: middle;
+			}
+			&[class*="right"], &[class*="left"] {
+				width: 60%;
+			}
+			&[class*="right"] {
+				margin-top: 5px;
+				margin-right: 10%;
+				float: right;
+			}
+			&[class*="left"] {
+				float: left;
+				margin-left: 10%;
+			}
+		}
+	}
+	.profile-pic {
+		position: relative;
+		right: 0;
+		margin: 30px 35px 0 0;
+		float: right;
+		width: 55px;
+		height: 55px;
+		border-radius: 50px;
+		text-align: center;
+		background: $Grey;
+		.pic {
+			width: 55px;
+			height: 55px;
+			display: inline-block;
+			border-radius: 50%;
+			background: url('../images/profile-pic.jpg') no-repeat center;
+			background-size: cover;
+		}
+	}
+	.welcome-text {
+		padding: 25px 35px 30px 35px;
+		@media #{$mobile-small} {
+			padding: 25px 35px 30px 5%;
+		}
+		p {
+			font-size: 24px;
+			@media #{$mobile-small} {
+				font-size: 22px;
+			}
+			font-weight: 500;
+			margin-bottom: 0px;
+			color: $Grey-dr;
+		}
+		a {
+			text-decoration: none;
+			color: $Turquoise;
+		}
+	}
+	&.cover {
+		.menu-toggle {
+			span {
+				background: $White;
+				height: 2px;
+			}
+		}
+		.welcome-text {
+			padding-bottom: 35px;
+			@media #{$mobile-small} {
+				padding: 25px 35px 30px 12%;
+			}
+		}
+	}
+}
